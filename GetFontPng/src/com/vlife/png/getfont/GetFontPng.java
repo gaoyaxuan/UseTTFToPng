@@ -66,10 +66,11 @@ public class GetFontPng {
         	String st=str.substring(begin, end);
         	if(fm.stringWidth(st)+120>width){
         		
-        		sb.append(st+"&&") ;
+        		sb.append(st+"&@") ;
         		begin=i;
         		
         	}else if (i+1 == str.length()){
+        		st=str.substring(begin);
         		sb.append(st) ;
         		break;
         	}
@@ -80,7 +81,7 @@ public class GetFontPng {
         	
 		}
         //没个是一行文字
-        String str2[]=sb.toString().trim().split("&&");
+        String str2[]=sb.toString().trim().split("&@");
         
         for(String s:str2){
         	//y增加 换行
