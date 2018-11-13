@@ -29,11 +29,9 @@ public class GetFontPng {
 		if (strLength == 0) {
 			strLength = 1;
 		}
-		// 去除\r
-		Picturestr = Picturestr.replaceAll("\\\\n", "\n");
-		Picturestr = Picturestr.replaceAll("\\\\r", "");
-		String replaceBlankStr = replaceBlank(Picturestr).trim();
-		String[] eachLineStr = replaceBlankStr.split("\n");
+		System.out.println(Picturestr);
+		String[] eachLineStr = Picturestr.split("#M#");
+		System.out.println(eachLineStr.length);
 
 		File file = new File(fontUrl);
 		Font font = Font.createFont(Font.TRUETYPE_FONT, file);
